@@ -26,7 +26,7 @@ int main()
 {
 	Sqlist L;//声明一个顺序表 
 	InitList (&L)//初始化顺序表
-	//。。。。往顺序表中随便插入几个元素。。。
+	//。。。。往顺序表中随便插入几个元素。。。。。。 
 	IncreaseSize(L,5); 
 	return 0;
  }
