@@ -40,7 +40,7 @@ int LocateElem(SeqList L,int e){//按值查找
 	for(i=0;i<L.length;i++)
 		if(L.data==e)
 			return i+1;//数组下标为i的元素值等于e,返回其位序i+1 
-	return 0;//退出循环，说明查找失败 
+	return 0;//退出循环，说明查找失败了 
 } 
 int main()
 {
