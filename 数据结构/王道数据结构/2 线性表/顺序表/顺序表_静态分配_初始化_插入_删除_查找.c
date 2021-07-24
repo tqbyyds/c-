@@ -7,38 +7,38 @@ typedef struct{
 //基本操作初始化一个顺序表 
 void InitList(Sqlist* L){
 	for(int i=0;i<MaxSize;i++); //将所有数据元素设置为默认初始值 
-		L.data[i]=0;
-	L.length=0;//顺序表初始长度为0 
+		L->data[i]=0;
+	L->length=0;//顺序表初始长度为0 
 }
 bool void ListInsert(SeqList* L,int i,int e){
-	if(i<1||i>L.length+1)//判断i的范围是否有效 
+	if(i<1||i>L->length+1)//判断i的范围是否有效 
 		return false;
-	if(L.length>=Maxize)//当前存储空间已满不能插入 
+	if(L->length>=Maxize)//当前存储空间已满不能插入 
 		return false;
 	int j=0;
-	for(j=L.length;j>=i;j--)//将第i个元素及之后的元素后移 
-		L.data[j]=L.data[j-1];
-	L.data[i-1]=e;//在位置i处放入e 
-	L.length++;//长度加1
+	for(j=L->length;j>=i;j--)//将第i个元素及之后的元素后移 
+		L->data[j]=L->data[j-1];
+	L->data[i-1]=e;//在位置i处放入e 
+	L->length++;//长度加1
 	return true;
 }
 bool void ListDelete(SeqList* L,int i,int* e){
-	if(i<1||i>L.length+1)//判断i的范围是否有效 
+	if(i<1||i>L->length+1)//判断i的范围是否有效 
 		return false;
-	*e=L.data[i-1];
+	*e=L->data[i-1];
 	int j=0;
-	for(j=i;j<L.length;j++)//将第i个元素及之后的元素后前移 
-		L.data[j-1]=L.data[j]; 
-	L.length--;//长度减1
+	for(j=i;j<L->length;j++)//将第i个元素及之后的元素后前移 
+		L->data[j-1]=L->data[j]; 
+	L->length--;//长度减1
 	return true;
 }
 int GetElem(SeqList L,int i){//按位查找 
-	return L.data[i-1];
+	return L->data[i-1];
 }
 int LocateElem(SeqList L,int e){//按值查找 
 	int i=0; 
-	for(i=0;i<L.length;i++)
-		if(L.data==e)
+	for(i=0;i<L->length;i++)
+		if(L->data==e)
 			return i+1;//数组下标为i的元素值等于e,返回其位序i+1 
 	return 0;//退出循环，说明查找失败了 
 } 
