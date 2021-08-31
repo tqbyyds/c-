@@ -9,7 +9,8 @@ TreeNode t[MaxSize];
 for(int =0;i<MaxSize;i++){
 	t[i].isEmpty=true;
 }                       //常考基本操作 i的左孩子 --2i  i的右孩子--2i+1 i的父结点 向下取整(i/2 )
-                        //i所在的层次。。。。。 
+                        //i所在的层次。。。。。
+
 int main()
 {
 
