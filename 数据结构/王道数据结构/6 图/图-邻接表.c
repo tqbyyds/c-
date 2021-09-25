@@ -12,7 +12,7 @@ typedef struct VNode{
 }VNode,AdjList[MaxVertexNum];
 //用邻接表存储的图
 typedef struct{
-	AdjList vertices;//顶点的数组
+	AdjList vertices;//顶点结点的数组 即 AdjList类型为顶点结点的数组 
 	int vexnum,arcnum;//顶点和边的数量 
 }ALGraph; 
 int main()
