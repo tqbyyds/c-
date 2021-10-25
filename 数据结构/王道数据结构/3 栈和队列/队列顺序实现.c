@@ -17,7 +17,7 @@ bool QueueEmpty(SqQueue Q){
 }
 //入队操作 
 bool EnQueue(SqQueue *Q,int x){
-	if(队列已满)
+	if((Q.rear+1)%MaxSize==Q.front)
 		return false;//队满则报错
 	Q->data[Q->rear]=X;//rear指向的是将要插入的位置 将x插入队尾
 	Q->rear=Q.rear+1;//队尾指针后移动
